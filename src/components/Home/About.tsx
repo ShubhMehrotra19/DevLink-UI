@@ -19,7 +19,6 @@ export default function About() {
             but also fosters meaningful connections. <br /> 
             Join us as we empower developers to excel in the tech industry <br /> 
             through a holistic approach to <span className="p-1 bg-slate-600/[0.5] rounded-md">skill development</span> and <span className="p-1 bg-slate-600/[0.5] rounded-md">networking</span>.</p>
-            {/* <img className="scale-125 ml-3" src="/card/rotated.png" alt="" /> */}
             <Cardfront />
            </div>
         </div>

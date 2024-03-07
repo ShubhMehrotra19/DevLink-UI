@@ -4,6 +4,8 @@ import { GlowingStarsBackgroundCardPreview } from "@/components/Home/GlowingStar
 import { GridBackgroundDemo } from "@/components/Home/GridBackgroundDemo";
 import Navbar from "@/components/navbar/Navbar";
 import { HeroScrollDemo } from "@/components/Home/HeroScrollDemo";
+import Footer from "@/components/Home/Footer";
+import { InfiniteMovingCardsDemo } from "@/components/Home/InfiniteMovingCardsDemo";
 
 export default function Home() {
   const cardValue = [
@@ -36,6 +38,8 @@ export default function Home() {
           ))}
         </div>
         <About />
+        <InfiniteMovingCardsDemo />
+        <Footer />
         </section>
       </div>
   );
