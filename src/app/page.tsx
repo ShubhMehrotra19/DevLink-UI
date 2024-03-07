@@ -1,9 +1,43 @@
-import { GridBackgroundDemo } from "@/components/GridBackgroundDemo";
+import Cardfront from "@/components/Home/CardFront/cardfront";
+import About from "@/components/Home/About";
+import { GlowingStarsBackgroundCardPreview } from "@/components/Home/GlowingStarsBackgroundCardPreview";
+import { GridBackgroundDemo } from "@/components/Home/GridBackgroundDemo";
+import Navbar from "@/components/navbar/Navbar";
+import { HeroScrollDemo } from "@/components/Home/HeroScrollDemo";
 
 export default function Home() {
+  const cardValue = [
+    {
+      cons: "Network Faster",
+      description: "With Devlink, you can network faster and more efficiently.",
+    },
+    {
+      cons: "Retro but Sleek",
+      description: "DevLink brings the retro business cards with a digital touch.",
+    },
+    {
+      cons: "Transparency",
+      description: "With Github Authentication, we bring transparency to the table.",
+    },
+  ];
+
   return (
-   <>
-   <GridBackgroundDemo />
-   </>
+    <div className="relative">
+      <div className="sticky z-10 w-full top-0">
+        <Navbar />
+      </div>
+        <section>
+          <GridBackgroundDemo />
+          <HeroScrollDemo />
+          <div className=" m-5 text-center w-full text-6xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">With DevLink you get</div>
+          <div className="flex md:flex-row flex-col justify-center md:gap-24 gap-3 mx-auto items-center w-screen md:mb-24">
+        {cardValue.map((card, index) => (
+            <GlowingStarsBackgroundCardPreview key={index} cons={card.cons} description={card.description} />
+          ))}
+        </div>
+        <About />
+        </section>
+      </div>
   );
 }
+
