@@ -17,10 +17,10 @@ function Cardfront(props: Props) {
       </div>
       <div className='flex justify-between items-center mt-14'>
         <div className='flex justify-center items-center gap-6'>
-          <Link href={'https://github.com/ShubhMehrotra19'}> <Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/githubcard.png" alt="" /></Link>
-          <Link href={'https://www.linkedin.com/in/shubhmehrotra19'}><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkedin.png" alt="" /></Link>
-          <Link href={'https://twitter.com/ShubhMehro40210'}><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/twitter.png" alt="" /></Link>
-          <Link href={'https://shubh-portfolio-delta.vercel.app/'}><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkcard.png" alt="" /></Link>
+          <Link href={'https://github.com/ShubhMehrotra19'} target='_blank'> <Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/githubcard.png" alt="" /></Link>
+          <Link href={'https://www.linkedin.com/in/shubhmehrotra19'} target='_blank'><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkedin.png" alt="" /></Link>
+          <Link href={'https://twitter.com/ShubhMehro40210'} target='_blank'><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/twitter.png" alt="" /></Link>
+          <Link href={'https://shubh-portfolio-delta.vercel.app/'} target='_blank'><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkcard.png" alt="" /></Link>
         </div>
         <div className="text-center text-black text-lg font-bold font-['Poppins']">22BCE10561</div>
       </div>
