@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
-import { Badge } from "lucide-react";
+
 
 export function HeroScrollDemo() {
   return (

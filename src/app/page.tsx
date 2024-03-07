@@ -30,7 +30,7 @@ export default function Home() {
       </div>
         <section>
           <GridBackgroundDemo />
-          <HeroScrollDemo />
+          <div className=" md:block hidden"><HeroScrollDemo /></div>
           <div className=" m-5 text-center w-full text-6xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">With DevLink you get</div>
           <div className="flex md:flex-row flex-col justify-center md:gap-24 gap-3 mx-auto items-center w-screen md:mb-24">
         {cardValue.map((card, index) => (

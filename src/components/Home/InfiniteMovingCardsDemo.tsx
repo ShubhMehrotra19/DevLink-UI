@@ -18,31 +18,31 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "With DevLink, connecting and Netwroking with your colleagues becomes better and easier. Just a scan or a link away. It's a must have for every student.",
+    name: "Shubh Mehrotra",
+    title: "DevLink CEO",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+      "We use the Github authentication for DevLink to help you know the work of the person you are connecting with. It's a great way to know the person's work and connect with them.",
+    name: "Ishank Lalwani",
+    title: "DevLink Backend Developer",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    quote: "We have made an effort to make DevLink as user-friendly as possible. Finding likeminded peers can be as difficult as finding a needle in a haystack. DevLink is here to help you with that. We are here to help you grow!",
+    name: "Harshvardhan Singh",
+    title: "DevLink tester",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "Unlock your potential by finding people with a similar tech-stack. Reduce the time for un-necessary banter with just a scan.",
+    name: "Shashwat Dimri",
+    title: "DevLink Frontend Developer",
+  },
+  {
+    quote:
+      "While mainting the authenticity, it helps you to connect with people, who are better than you in your domain. Through DevLink, we help you grow!",
+    name: "Aditya Gupta",
+    title: "DevLink tester",
   },
 ];
