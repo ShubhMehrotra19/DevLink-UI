@@ -6,7 +6,7 @@ interface Props {}
 
 function Cardfront(props: Props) {
   return (
-    <div className='ml-10 p-6 flex flex-col bg-white w-[600px] h-[350px] rounded flex-grow border-black/[0.4] border-2 -rotate-[12deg] shadow-current shadow-md mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out'>
+    <div className='ml-10 p-6 flex flex-col bg-[#F9F9F9] w-[600px] h-[350px] rounded flex-grow border-black/[0.4] border-2 -rotate-[12deg] shadow-current shadow-md mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out'>
       <div className='flex justify-between items-start'>
         <div className='flex flex-col justify-start items-start'>
           <Image height={150} width={150} className='mb-3' src="/card/cardpic.png" alt="" />
