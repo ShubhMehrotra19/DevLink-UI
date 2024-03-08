@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-between">
         <div className='flex justify-center items-center md:scale-100 scale-90'>
-            <img className='scale-50' src="/icons/link.png" alt="" />
+            <Image height={48} width={48} className='scale-50' src="/icons/link.png" alt="" />
             <p className='text-lg text-white font-medium'>DevLink</p>
         </div>
           <div className="w-auto p-8">
