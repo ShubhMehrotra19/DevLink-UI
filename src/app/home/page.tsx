@@ -1,87 +1,122 @@
+"use client"
 import React from 'react';
 import Navbar from './Navbar';
-import Cardfront from '@/components/CardComponent/cardFront';
+import { FollowingPointerDemo } from '@/components/CardComponent/FollowingPointerDemo';
 
 interface Props {}
 
 function Page(props: Props) {
     const values = [
-        {
-            userName: "Rahul Verma",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
-        {
-            userName: "Rahul Chautala",
-            userDomain: "#webdevelopment", 
-            imageLink: "https://images.pexels.com/photos/1329494/pexels-photo-1329494.jpeg?auto=compress&cs=tinysrgb&w=600", 
-            regNumber: "22BCE10001"
-        },
+       {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
+          {
+            slug: "amazing-tailwindcss-grid-layouts",
+            author: "Manu Arora",
+            registerNumber: "22BCE10561",
+            title: "Manu Arora",
+            description:
+              "I think, putting the github description here would be a good idea. What do you think?",
+            image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+            authorAvatar: "/card/cardpic.png",
+          },
     ]
   const {} = props;
 
   return (
-    <section className='bg-white h-screen w-full'>
+    <section className='h-screen w-full'>
       <Navbar userImage='https://images.pexels.com/photos/20445473/pexels-photo-20445473.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load' />
       <div className="flex justify-center items-start overflow-y-scroll h-[80%] pt-2">
-  <div className='grid md:grid-cols-2 gap-20'>
+  <div className='grid md:grid-cols-4 gap-12'>
     {values.map((value, index) => (
-      <Cardfront key={index} userName={value.userName} userDomain={value.userDomain} imageLink={value.imageLink} regNumber={value.regNumber} />
+      <FollowingPointerDemo key={index} author={value.author} registerNumber={value.registerNumber} title={value.title} description={value.description} image={value.image} authorAvatar={value.authorAvatar} />
     ))}
   </div>
 </div>

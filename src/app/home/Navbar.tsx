@@ -27,8 +27,8 @@ function Navbar({ userImage }: { userImage: string }) {
             height={50}
             width={50}
             className='scale-50 ' 
-            src="/icons/linkcard.png" alt="" />
-            <p className='text-lg text-black font-semibold'>DevLink</p>
+            src="/icons/link.png" alt="" />
+            <p className='text-lg text-white font-semibold'>DevLink</p>
         </div>
 
         <div className="flex grow justify-end">
@@ -40,7 +40,7 @@ function Navbar({ userImage }: { userImage: string }) {
             onChange={handleSearchChange}
           />
           <button
-            className="ml-2 px-4 py-2 bg-gray-950 text-white rounded-md hover:bg-gray-800 focus:ring-white focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 active:scale-95"
+            className="ml-2 px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-400 focus:ring-white focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 active:scale-95"
             onClick={handleSearchSubmit}
           >
             Search
