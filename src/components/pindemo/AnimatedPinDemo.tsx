@@ -2,13 +2,14 @@
 import React from "react";
 import { PinContainer } from "../ui/3d-pin";
 import Image from "next/image";
+import Link from "next/link";
 
 export function AnimatedPinDemo() {
   return (
     <div className="h-[40rem] w-full flex items-center justify-center ">
-      <PinContainer
+      <Link href='/'><PinContainer
         title="DevLink"
-        href="https://devlink-kappa.vercel.app/"
+        href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
@@ -21,7 +22,7 @@ export function AnimatedPinDemo() {
           </div>
           <Image src={'/card/error.png'} alt="Error 404" width={700} height={400} />
         </div>
-      </PinContainer>
+      </PinContainer></Link>
     </div>
   );
 }
