@@ -40,7 +40,7 @@ function Navbar({ userImage }: { userImage: string }) {
             onChange={handleSearchChange}
           />
           <button
-            className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:ring-blue-600 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 active:scale-95"
+            className="ml-2 px-4 py-2 bg-gray-950 text-white rounded-md hover:bg-gray-800 focus:ring-white focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 active:scale-95"
             onClick={handleSearchSubmit}
           >
             Search
