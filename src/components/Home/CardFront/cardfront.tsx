@@ -10,8 +10,8 @@ function Cardfront(props: Props) {
       <div className='flex justify-between items-start'>
         <div className='flex flex-col justify-start items-start'>
           <Image height={150} width={150} className='mb-3' src="/card/cardpic.png" alt="" />
-          <div className="text-black text-4xl font-semibold font-['Poppins']">Shubh Mehrotra</div>
-          <div className="text-black text-base font-normal font-['Poppins']">Web Developer</div>
+          <div className="text-black text-4xl font-semibold font-poppins">Shubh Mehrotra</div>
+          <div className="text-black text-base font-normal font-poppins">Web Developer</div>
         </div>
         <Image height={100} width={100} className='-mt-2' src="/card/qrcode.png" alt="" />
       </div>
@@ -22,7 +22,7 @@ function Cardfront(props: Props) {
           <Link href={'https://twitter.com/ShubhMehro40210'} target='_blank'><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/twitter.png" alt="" /></Link>
           <Link href={'https://shubh-portfolio-delta.vercel.app/'} target='_blank'><Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkcard.png" alt="" /></Link>
         </div>
-        <div className="text-center text-black text-lg font-bold font-['Poppins']">22BCE10561</div>
+        <div className="text-center text-black text-lg font-bold font-poppins">22BCE10561</div>
       </div>
     </div>
   );

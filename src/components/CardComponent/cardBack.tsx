@@ -9,8 +9,8 @@ function CardBack({githubUserName, githubBio, githubImageLink, regNumber, hashta
       <div className='flex justify-between items-start'>
         <div className='flex flex-col justify-start items-start'>
           <Image height={160} width={160} className='mb-3 rounded-full object-cover h-40 w-40' src={githubImageLink} alt="" />
-          <div className="text-black text-4xl font-semibold font-['Poppins']">{githubUserName}</div>
-          <div className="text-black text-lg font-normal font-['Poppins'] mb-2">{githubBio}</div>
+          <div className="text-black text-4xl font-semibold font-poppins">{githubUserName}</div>
+          <div className="text-black text-lg font-normal font-poppins mb-2">{githubBio}</div>
           <div className='flex justify-center items-center gap-2 text-black text-sm'>
             <p>{hashtag1}</p>
             <p>{hashtag2}</p>

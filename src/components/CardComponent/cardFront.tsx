@@ -9,8 +9,8 @@ function Cardfront({userName, userDomain, imageLink, regNumber}: any) {
       <div className='flex justify-between items-start'>
         <div className='flex flex-col justify-start items-start'>
           <Image height={160} width={160} className='mb-3 rounded-full object-cover h-40 w-40' src={imageLink} alt="" />
-          <div className="text-black text-4xl font-semibold font-['Poppins']">{userName}</div>
-          <div className="text-black text-base font-normal font-['Poppins']">{userDomain}</div>
+          <div className="text-black text-4xl font-semibold font-poppins">{userName}</div>
+          <div className="text-black text-base font-normal font-poppins">{userDomain}</div>
         </div>
         <Image height={100} width={100} className='-mt-2' src="/card/qrcode.png" alt="" />
       </div>
@@ -21,7 +21,7 @@ function Cardfront({userName, userDomain, imageLink, regNumber}: any) {
           <Image height={28} width={28} src="/icons/twitter.png" alt="" />
           <Image height={28} width={28} src="/icons/linkcard.png" alt="" />
         </div>
-        <div className="text-center text-black text-lg font-bold font-['Poppins']">{regNumber}</div>
+        <div className="text-center text-black text-lg font-bold font-poppins">{regNumber}</div>
       </div>
     </div>
   );

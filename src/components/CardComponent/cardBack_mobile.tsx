@@ -9,8 +9,8 @@ function Cardback_mobile(props: Props) {
     <div className=' select-none p-6 flex flex-col bg-[#F9F9F9] h-[450px] w-[300px] rounded flex-grow border-black/[0.4] border-2 shadow-current shadow-md mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out'>
       <div className='flex flex-col justify-center items-center'>
           <Image height={100} width={100} className='mb-3' src="/card/cardpic.png" alt="" />
-          <div className="text-black text-2xl font-semibold font-['Poppins'] mb-3">Stoic-Coder2003</div>
-          <div className="text-black text-sm font-normal font-['Poppins'] mb-3 text-center px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum expedita nemo ipsum esse voluptates.</div>
+          <div className="text-black text-2xl font-semibold font-poppins mb-3">Stoic-Coder2003</div>
+          <div className="text-black text-sm font-normal font-poppins mb-3 text-center px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum expedita nemo ipsum esse voluptates.</div>
           <div className='flex justify-center items-center gap-2 text-black text-[9px] mb-24'>
             <p>#WebDevelopment</p>
             <p>#Fullstackdevelopment</p>
