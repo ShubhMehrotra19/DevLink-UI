@@ -114,7 +114,7 @@ function Page(props: Props) {
     <section className='h-screen w-full'>
       <Navbar userImage='https://images.pexels.com/photos/20445473/pexels-photo-20445473.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load' />
       <div className="flex justify-center items-start overflow-y-scroll h-[80%] pt-2">
-  <div className='grid md:grid-cols-4 gap-12'>
+  <div className='grid md:grid-cols-4 md:gap-12 gap-4'>
     {values.map((value, index) => (
       <FollowingPointerDemo key={index} author={value.author} registerNumber={value.registerNumber} title={value.title} description={value.description} image={value.image} authorAvatar={value.authorAvatar} />
     ))}

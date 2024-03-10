@@ -1,0 +1,10 @@
+.cardContainer {
+    height: 350px;
+    width: 600px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
