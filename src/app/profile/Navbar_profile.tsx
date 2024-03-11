@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,7 +5,7 @@ import Link from 'next/link'
 export default function Navbar() {
   
   return (
-    <div className="relative w-full bg-[rgba(0, 0, 0, 0.07)] backdrop-blur -mt-[2px]">
+    <div className="relative w-full bg-[rgba(0, 0, 0, 0.07)] backdrop-blur -mt-[2px] z-20">
       <div className="mx-auto flex w-ful items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className='flex justify-center items-center md:scale-100 scale-90 cursor-pointer'>
             <Image 
@@ -22,7 +20,7 @@ export default function Navbar() {
           <Link href='/home'>
           <button
             type="button"
-            className="flex justify-center items-center gap-1 rounded-md bg-slate-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 active:scale-95 transition ease-in-out cursor-pointer"
+            className="justify-center md:block hidden items-center gap-1 rounded-md bg-slate-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 active:scale-95 transition ease-in-out cursor-pointer"
           >
             back
           </button></Link>

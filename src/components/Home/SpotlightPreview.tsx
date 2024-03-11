@@ -21,7 +21,7 @@ export function SpotlightPreview() {
           className="mt-4 mb-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto p-2"
           dangerouslySetInnerHTML={{ __html: lightDescription }}
         ></p>
-        <Link href='/home'><button className="py-2 px-5 rounded-sm bg-gray-900 text-white font-normal cursor-pointer active:scale-95 hover:bg-transparent transition duration-300 ease-in-out">Get Started</button></Link>
+        <Link href='/form'><button className="py-2 px-5 rounded-sm bg-gray-900 text-white font-normal cursor-pointer active:scale-95 hover:bg-transparent transition duration-300 ease-in-out">Get Started</button></Link>
       </div>
     </div>
   );
