@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FollowerPointerCard } from "../ui/following-pointer";
+import StaggeredDropDown from "../ui/StaggeredDropDown";
 
 export function FollowingPointerDemo({
   author,
@@ -16,7 +17,7 @@ export function FollowingPointerDemo({
           <TitleComponent title={author} avatar={authorAvatar} />
         }
       >
-        <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
+        <div className="relative h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
           <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative group-hover:scale-95 group-hover:rounded-2xl transform transition duration-200">
             <div className="w-full h-full">
               <Image
@@ -38,8 +39,8 @@ export function FollowingPointerDemo({
             </h2>
             <div className="flex flex-row justify-between items-center mt-10">
               <span className="text-sm text-gray-500">{registerNumber}</span>
-              <div className="relative z-10 px-6 py-2 bg-black hover:bg-black/90 hover:scale-[102%] active:scale-95 text-white font-bold rounded-xl block text-xs transition duration-200 ease-in-out">
-                Connect
+              <div className="relative z-10">
+                <StaggeredDropDown />
               </div>
             </div>
           </div>

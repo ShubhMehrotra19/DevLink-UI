@@ -18,10 +18,10 @@ function CardBack() {
           </div>
         </div>
         <div className='flex justify-center items-center gap-8 -rotate-90'>
-          <Image height={28} width={28} src="/icons/githubcard.png" alt="" />
-          <Image height={28} width={28} src="/icons/linkedin.png" alt="" />
-          <Image height={28} width={28} src="/icons/twitter.png" alt="" />
-          <Image height={28} width={28} src="/icons/linkcard.png" alt="" />
+          <Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/githubcard.png" alt="" />
+          <Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkedin.png" alt="" />
+          <Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/twitter.png" alt="" />
+          <Image height={28} width={28} className='hover:scale-105 duration-300 ease-in-out active:scale-95' src="/icons/linkcard.png" alt="" />
         </div>
       </div>
     </div>
