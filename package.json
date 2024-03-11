@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.0.2",
     "@react-hook/media-query": "^1.1.1",
+    "@tabler/icons-react": "^3.0.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
     "google-fonts": "^1.0.0",

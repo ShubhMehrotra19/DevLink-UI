@@ -1,7 +1,6 @@
 // Core component that receives mouse positions and renders pointer and content
 
 import React, { useEffect, useState } from "react";
-
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { cn } from "@/app/utils/cn";
 
@@ -18,12 +17,23 @@ export const FollowerPointerCard = ({
   const y = useMotionValue(0);
   const ref = React.useRef<HTMLDivElement>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
-  const [isInside, setIsInside] = useState<boolean>(false); // Add this line
+  const [isInside, setIsInside] = useState<boolean>(false);
+  const [isDesktop, setIsDesktop] = useState<boolean>(true); // Add this line
 
   useEffect(() => {
     if (ref.current) {
       setRect(ref.current.getBoundingClientRect());
     }
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768); // Adjust the breakpoint as needed
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -34,6 +44,7 @@ export const FollowerPointerCard = ({
       y.set(e.clientY - rect.top + scrollY);
     }
   };
+
   const handleMouseLeave = () => {
     setIsInside(false);
   };
@@ -41,6 +52,7 @@ export const FollowerPointerCard = ({
   const handleMouseEnter = () => {
     setIsInside(true);
   };
+
   return (
     <div
       onMouseLeave={handleMouseLeave}
@@ -53,12 +65,13 @@ export const FollowerPointerCard = ({
       className={cn("relative", className)}
     >
       <AnimatePresence mode="wait">
-        {isInside && <FollowPointer x={x} y={y} title={title} />}
+        {isDesktop && isInside && <FollowPointer x={x} y={y} title={title} />}
       </AnimatePresence>
       {children}
     </div>
   );
 };
+
 
 export const FollowPointer = ({
   x,
