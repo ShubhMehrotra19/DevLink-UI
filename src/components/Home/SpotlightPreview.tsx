@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import { Spotlight } from "@/components/ui/Spotlight";
-import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 export function SpotlightPreview() {
   const lightDescription = `Feeling left out in the dark? Let's shine a light on your next project!
@@ -21,7 +22,12 @@ export function SpotlightPreview() {
           className="mt-4 mb-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto p-2"
           dangerouslySetInnerHTML={{ __html: lightDescription }}
         ></p>
-        <Link href='/form'><button className="py-2 px-5 rounded-sm bg-gray-900 text-white font-normal cursor-pointer active:scale-95 hover:bg-transparent transition duration-300 ease-in-out">Get Started</button></Link>
+        <button
+          onClick={() => signIn("github", { callbackUrl: "/form" })}
+          className="py-2 px-5 rounded-sm bg-gray-900 text-white font-normal cursor-pointer active:scale-95 hover:bg-transparent transition duration-300 ease-in-out"
+        >
+          Get Started
+        </button>
       </div>
     </div>
   );
