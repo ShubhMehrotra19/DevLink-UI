@@ -10,11 +10,11 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_SECRET!,
       async profile(profile: GithubProfile) {
         try {
-          const userExists = await services.form.getOne({
+          const [status, userExists] = await services.form.getOne({
             email: profile.email!,
           });
 
-          if (!userExists) {
+          if (!status) {
             await services.form.create({
               firstName: "",
               lastName: "",
