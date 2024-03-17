@@ -5,31 +5,16 @@ import { Input } from "@/components/ui/input";
 import { cn } from "../utils/cn";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { Console, log } from "console";
 
 export function Form() {
   const { data: session } = useSession();
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    linkedin: "",
-    twitter: "",
-    portfolio: "",
-  });
-  const [imageError, setImageError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [id]: value,
-    }));
-    console.log(formData); // Log formData after updating
-  };
+  const [imageError, setImageError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const formData = new FormData(e.currentTarget);
     const imageInput = e.currentTarget.querySelector(
       "#image"
     ) as HTMLInputElement;
@@ -62,14 +47,13 @@ export function Form() {
 
           // Proceed with form submission
           try {
-            const formDataToSend = new FormData(e.currentTarget);
             (async () => {
               const submitForm = async () => {
                 const response = await fetch(
                   `/api/form/${session?.user?.email}`,
                   {
                     method: "PUT",
-                    body: formDataToSend,
+                    body: formData,
                   }
                 );
 
@@ -106,56 +90,24 @@ export function Form() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input
-              id="firstname"
-              placeholder="First"
-              type="text"
-              value={formData.firstname}
-              onChange={handleChange}
-            />
+            <Input id="firstname" placeholder="First" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input
-              id="lastname"
-              placeholder="Last"
-              type="text"
-              value={formData.lastname}
-              onChange={handleChange}
-            />
+            <Input id="lastname" placeholder="Last" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="link">Linkedin</Label>
-          <Input
-            id="linkedin"
-            placeholder="Linkedin Link"
-            type="text"
-            value={formData.linkedin}
-            onChange={handleChange}
-            required
-          />
+          <Input id="link" placeholder="Linkedin Link" type="text" required />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="link">Twitter</Label>
-          <Input
-            id="twitter"
-            placeholder="Twitter Link"
-            type="text"
-            value={formData.twitter}
-            onChange={handleChange}
-            required
-          />
+          <Input id="link" placeholder="Twitter Link" type="text" required />
         </LabelInputContainer>
         <LabelInputContainer className="mb-5">
           <Label htmlFor="link">Portfolio</Label>
-          <Input
-            id="portfolio"
-            placeholder="Portfolio"
-            type="text"
-            value={formData.portfolio}
-            onChange={handleChange}
-          />
+          <Input id="link" placeholder="Portfolio" type="text" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="image">Image</Label>
