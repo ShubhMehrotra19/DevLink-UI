@@ -23,7 +23,7 @@ export function SpotlightPreview() {
           dangerouslySetInnerHTML={{ __html: lightDescription }}
         ></p>
         <button
-          onClick={() => signIn("github", { callbackUrl: "/form" })}
+          onClick={() => signIn("github", { callbackUrl: "/home" })}
           className="py-2 px-5 rounded-sm bg-gray-900 text-white font-normal cursor-pointer active:scale-95 hover:bg-transparent transition duration-300 ease-in-out"
         >
           Get Started
