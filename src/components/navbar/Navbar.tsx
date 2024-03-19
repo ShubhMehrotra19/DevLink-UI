@@ -37,7 +37,7 @@ export default function Navbar() {
                 type="button"
                 className="flex justify-center items-center gap-1 rounded-md bg-slate-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 active:scale-95 transition ease-in-out cursor-pointer"
                 onClick={() => {
-                  signIn("github", { callbackUrl: "/form" });
+                  signIn("github", { callbackUrl: "/home" });
                 }}
               >
                 <Image height={24} width={24} src="/icons/github.png" alt="" />

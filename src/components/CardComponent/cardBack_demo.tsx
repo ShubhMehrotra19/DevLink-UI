@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 interface Props {}
 
-function CardBack() {
+function cardBack_demo() {
 
     return (
         <div className=' select-none p-6 flex flex-col bg-white w-[600px] h-[350px] rounded flex-grow border-black/[0.4] border-2 mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out'>
@@ -28,4 +28,4 @@ function CardBack() {
     )
 }
 
-export default CardBack
+export default cardBack_demo

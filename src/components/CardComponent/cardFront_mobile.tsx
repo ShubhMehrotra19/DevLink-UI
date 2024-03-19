@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import QRCode from "react-qr-code";
 
 interface Props {}
 
@@ -11,7 +12,12 @@ function Cardfront_mobile(props: Props) {
           <Image height={100} width={100} className='mb-3' src="/card/cardpic.png" alt="" />
           <div className="text-black text-2xl font-semibold font-poppins">Shubh Mehrotra</div>
           <div className="text-black text-sm font-normal font-poppins mb-3">Web Developer</div>
-        <Image height={120} width={120} className='-mt-2 object-cover mb-3' src="/card/qrcode.png" alt="" />
+          <QRCode
+    size={120}
+    className=' object-contain'
+    value={'https://shubh-portfolio-delta.vercel.app/'}
+    viewBox={`0 0 256 256`}
+    />
         <div className="text-center text-black text-lg font-bold font-poppins mb-8">22BCE10561</div>
       </div>
         <div className='flex justify-center items-center gap-6'>
