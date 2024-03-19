@@ -1,6 +1,6 @@
 import services from "@/services";
 
-export default async function GET(_req: Request) {
+export async function GET(_req: Request) {
   try {
     const [success, userDetails] = await services.form.getMany({});
 
