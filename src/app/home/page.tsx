@@ -1,34 +1,31 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { FollowingPointerDemo } from "@/components/CardComponent/FollowingPointerDemo";
 import { GridBackgroundDemo1 } from "./GridBackgroundDemo1";
 import { useSession } from "next-auth/react";
 import Loading from "../loading";
 
-interface Props {}
+interface Data {
+  firstName: "";
+  lastName: "";
+  regno: "";
+  description: "";
+  image: "";
+  avatar: "";
+  linkedin: "";
+  github: "";
+  twitter: "";
+  portfolio: "";
+}
 
-function Page(props: Props) {
-  const [values, setValues] = useState([
-    {
-      firstName: "",
-      lastName: "",
-      regno: "",
-      description: "",
-      image: "",
-      avatar: "",
-      linkedin: "",
-      github: "",
-      twitter: "",
-      portfolio: "",
-    },
-  ]);
+function Page() {
+  const [values, setValues] = useState<[Data]>();
 
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearchValue = (value: string) => {
     setSearchValue(value);
-    fetchData();
   };
 
   const [loading, setLoading] = useState(false);
@@ -36,23 +33,14 @@ function Page(props: Props) {
   async function fetchData() {
     setLoading(true);
     try {
-      if (searchValue != "") {
-        const response = await fetch(`/api/form/search/${searchValue}`, {
-          method: "GET",
-        });
+      console.log(searchValue);
+      const response = searchValue
+        ? await fetch(`/api/form/search/${searchValue}`)
+        : await fetch(`/api/form`);
 
-        const res = await response.json();
+      const res = await response.json();
 
-        setValues(res.data);
-      } else {
-        const response = await fetch(`/api/form`, {
-          method: "GET",
-        });
-
-        const res = await response.json();
-
-        setValues(res.data);
-      }
+      setValues(res.data);
     } catch (e) {
       console.log(e);
     } finally {
@@ -61,10 +49,14 @@ function Page(props: Props) {
   }
 
   useEffect(() => {
-    fetchData();
+    if (searchValue === "") {
+      fetchData();
+    }
   }, []);
 
-  const {} = props;
+  useEffect(() => {
+    fetchData();
+  }, [searchValue]);
 
   const { data: session } = useSession();
 
@@ -82,10 +74,10 @@ function Page(props: Props) {
           <section className="w-full">
             <div className="mt-20 absolute top-0 left-12 flex justify-center items-start h-[86%] pt-2 mb-4">
               <div className="grid md:grid-cols-4 md:gap-12 gap-4">
-                {values.length === 0 ? (
+                {!values ? (
                   <div>Nothing found!</div>
                 ) : (
-                  values.map((value, index) =>
+                  values!.map((value, index) =>
                     !value.firstName ? (
                       <div
                         key={index}

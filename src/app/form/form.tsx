@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "../utils/cn";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   firstName: string;
@@ -18,6 +19,7 @@ interface FormData {
 
 export function Form() {
   const { data: session } = useSession();
+  const router = useRouter();
 
   const [imageError, setImageError] = useState<string | null>(null);
   const [formData, setFormData] = useState<FormData>({
@@ -29,6 +31,8 @@ export function Form() {
     portfolio: "",
     image: null,
   });
+
+  const [response, setResponse] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -90,13 +94,11 @@ export function Form() {
         body: JSON.stringify(formData),
       });
 
-      if (response) {
-        redirect("/home");
-      } else {
-        console.error("Form submission failed");
-      }
+      setResponse(await response.text());
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      router.push("/home");
     }
   };
 

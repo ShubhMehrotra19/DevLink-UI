@@ -1,9 +1,38 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Spotlight } from "@/components/ui/Spotlight";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 export function SpotlightPreview() {
+  const [callbackUrl, setCallbackURL] = useState("/form");
+  const [firstName, setFirstName] = useState("");
+
+  const { data: session } = useSession();
+
+  async function fetchData() {
+    try {
+      const response = await fetch(`/api/form/${session?.user?.email}`, {
+        method: "GET",
+      });
+
+      const res = await response.json();
+
+      setFirstName(res.data.firstName);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (firstName !== "") {
+      setCallbackURL("/home");
+    }
+  }, [firstName]);
+
   const lightDescription = `Feeling left out in the dark? Let's shine a light on your next project!
   Find like-minded individuals in your college. <br />
   <span class="text-xl pt-2 font-medium">Design-Develop-Deploy!</span>`;
@@ -23,7 +52,7 @@ export function SpotlightPreview() {
           dangerouslySetInnerHTML={{ __html: lightDescription }}
         ></p>
         <button
-          onClick={() => signIn("github", { callbackUrl: "/home" })}
+          onClick={() => signIn("github", { callbackUrl: callbackUrl })}
           className="py-2 px-5 rounded-sm bg-gray-900 text-white font-normal cursor-pointer active:scale-95 hover:bg-transparent transition duration-300 ease-in-out"
         >
           Get Started
