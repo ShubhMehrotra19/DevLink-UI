@@ -87,12 +87,15 @@ function Page(props: Props) {
                 ) : (
                   values.map((value, index) =>
                     !value.firstName ? (
-                      <div className="text-white text-7xl z-20 bg-white">
+                      <div
+                        key={index}
+                        className="text-white text-7xl z-20 bg-white"
+                      >
                         Nothing found!
                       </div>
                     ) : (
                       <FollowingPointerDemo
-                        key={index}
+                        key={value.github}
                         author={value.firstName + " " + value.lastName}
                         registerNumber={value.regno}
                         title={value.firstName + " " + value.lastName}
