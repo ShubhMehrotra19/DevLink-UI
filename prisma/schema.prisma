@@ -22,6 +22,7 @@ model User {
   description String?
 
   email String @unique
+  regno String @unique // Registration Number
 
   avatar String?
   image  String

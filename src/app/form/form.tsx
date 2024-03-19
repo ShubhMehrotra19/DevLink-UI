@@ -9,6 +9,7 @@ import { redirect } from "next/navigation";
 interface FormData {
   firstName: string;
   lastName: string;
+  regno: string;
   linkedin: string;
   twitter: string;
   portfolio: string;
@@ -22,6 +23,7 @@ export function Form() {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
+    regno: "",
     linkedin: "",
     twitter: "",
     portfolio: "",
@@ -78,7 +80,6 @@ export function Form() {
     e.preventDefault();
 
     const email = session?.user?.email;
-    console.log(email);
 
     try {
       const response = await fetch(`/api/form/${session?.user?.email}`, {
@@ -131,6 +132,17 @@ export function Form() {
             />
           </LabelInputContainer>
         </div>
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="linkedin">Registration Number</Label>
+          <Input
+            id="regno"
+            placeholder="Registration Number"
+            type="text"
+            required
+            value={formData.regno}
+            onChange={handleInputChange}
+          />
+        </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="linkedin">Linkedin</Label>
           <Input

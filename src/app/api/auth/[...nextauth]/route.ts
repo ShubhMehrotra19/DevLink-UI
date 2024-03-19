@@ -23,6 +23,7 @@ const handler = NextAuth({
               username: profile.login!,
               description: profile.bio || "",
               email: profile.email!,
+              regno: "",
               avatar: profile.avatar_url!,
               image: profile.avatar_url! || "",
               github: profile.html_url!,
