@@ -1,4 +1,4 @@
-import services from "../../../../../../services";
+import services from "../../../../../services";
 import { RegNoContext } from "./types";
 
 export async function GET(_req: Request, ctx: RegNoContext) {

@@ -1,4 +1,4 @@
-import services from "../../../../services";
+import services from "@/services";
 
 export async function GET(_req: Request) {
   try {

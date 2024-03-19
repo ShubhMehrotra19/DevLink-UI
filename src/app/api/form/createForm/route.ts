@@ -1,5 +1,5 @@
 import { ProfileCreateProps } from "../../../../../lib/validators/profileValidators";
-import service from "../../../../../services/index";
+import service from "../../../../services/index";
 
 export async function POST(req: Request) {
   try {

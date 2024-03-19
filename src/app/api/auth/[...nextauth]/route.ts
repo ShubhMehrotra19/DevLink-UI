@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import { GithubProfile } from "next-auth/providers/github";
 import { JWT } from "next-auth/jwt";
-import services from "../../../../../services";
+import services from "../../../../services";
 import { prisma } from "../../../../../lib/prisma";
 
 const handler = NextAuth({

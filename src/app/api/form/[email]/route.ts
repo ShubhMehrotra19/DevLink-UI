@@ -1,6 +1,6 @@
 import Email from "next-auth/providers/email";
 import { ProfileUpdateProps } from "../../../../../lib/validators/profileValidators";
-import services from "../../../../../services";
+import services from "../../../../services";
 import { EmailContext } from "./types";
 
 export async function PUT(req: Request, ctx: EmailContext) {
