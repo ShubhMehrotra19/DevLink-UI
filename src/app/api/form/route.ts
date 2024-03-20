@@ -1,5 +1,7 @@
 import services from "@/services";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(_req: Request) {
   try {
     const [success, userDetails] = await services.form.getMany({});
