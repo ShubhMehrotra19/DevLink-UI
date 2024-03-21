@@ -23,7 +23,7 @@ export function FollowingPointerDemo({
           <div className="w-full p-1 aspect-w-16 aspect-h-10 bg-gray-100  rounded-2xl overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative group-hover:scale-95 group-hover:rounded-2xl transform transition duration-200">
             <div className="w-full h-full">
               <Image
-                height={300}
+                height={150}
                 width={450}
                 src={image}
                 alt="thumbnail"

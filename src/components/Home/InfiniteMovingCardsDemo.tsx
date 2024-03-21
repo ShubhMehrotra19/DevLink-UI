@@ -37,7 +37,7 @@ const testimonials = [
     quote:
       "Unlock your potential by finding people with a similar tech-stack. Reduce the time for un-necessary banter with just a scan.",
     name: "Shashwat Dimri",
-    title: "DevLink Frontend Developer",
+    title: "DevLink Ideator",
   },
   {
     quote:

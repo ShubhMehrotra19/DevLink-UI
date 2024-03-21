@@ -6,11 +6,11 @@ interface Props {}
 function Loading(props: Props) {
   const {} = props;
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center z-50">
       <ThreeCircles
         visible={true}
-        height={200}
-        width={200}
+        height={65}
+        width={65}
         color="#ffffff"
         ariaLabel="three-circles-loading"
         wrapperStyle={{}}
