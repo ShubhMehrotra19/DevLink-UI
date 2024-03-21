@@ -76,7 +76,8 @@ function Page() {
       <div className="relative z-0">
         <GridBackgroundDemo1 />
       <Navbar userImage={session?.user?.image!} />
-        <motion.div className="absolute top-[10%] md:left-[20%] left-[10%]" style={{ opacity: parseFloat((1 - parseFloat(scrollYProgress.toString())).toFixed(2)), y: parseFloat((-100 * parseFloat(scrollYProgress.toString())).toFixed(2)) }}>
+       <div className="flex flex-col justify-center items-center">
+       <motion.div className="absolute top-[10%] md:left-[20%] left-[10%]" style={{ opacity: parseFloat((1 - parseFloat(scrollYProgress.toString())).toFixed(2)), y: parseFloat((-100 * parseFloat(scrollYProgress.toString())).toFixed(2)) }}>
           <div className="flex flex-col justify-center items-center mt-36 z-0">
             <h1 className="text-center w-full md:text-[150px] text-[90px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">DevLink</h1>
             <h2 className="text-center w-full md:text-[24px] text-[16px] -mt-5 font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">Network Smarter! Network Faster!</h2>
@@ -143,6 +144,7 @@ function Page() {
             </div>
           </section>
         )}
+        </div>
       </div>
     </>
   );

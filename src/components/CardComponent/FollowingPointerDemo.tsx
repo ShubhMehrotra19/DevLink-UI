@@ -21,7 +21,7 @@ export function FollowingPointerDemo({
       >
         <div className="relative h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
           <div className="w-full p-1 aspect-w-16 aspect-h-10 bg-gray-100  rounded-2xl overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative group-hover:scale-95 group-hover:rounded-2xl transform transition duration-200">
-            <div className="w-full h-full">
+            <div> {/* removed h-full w-full from here. */}
               <Image
                 height={150}
                 width={450}
