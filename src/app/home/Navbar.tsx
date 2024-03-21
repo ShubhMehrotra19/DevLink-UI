@@ -3,23 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 interface Props {
   userImage: string;
-  onSearchValue: (value: string) => void;
 }
 
-function Navbar({ userImage, onSearchValue }: Props) {
-  const [searchValue, setSearchValue] = useState("");
+function Navbar({ userImage }: Props) {
 
-  const handleSearchChange = (e: any) => {
-    setSearchValue(e.target.value);
-  };
-
-  const handleSearchSubmit = () => {
-    onSearchValue(searchValue);
-  };
 
   return (
     <div className="fixed top-0 w-full bg-[rgba(0, 0, 0, 0.07)] backdrop-blur z-30">
@@ -37,22 +27,7 @@ function Navbar({ userImage, onSearchValue }: Props) {
           </div>
         </Link>
 
-        <div className="flex grow justify-end">
-          <input
-            className="flex h-10 md:w-[250px] w-[125px]  rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 object-cover ring-2 ring-black/30"
-            type="text"
-            id="search"
-            placeholder="Search Registration Number..."
-            value={searchValue}
-            onChange={handleSearchChange}
-          />
-          <button
-            className="ml-2 px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-400 focus:ring-white focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 active:scale-95"
-            onClick={handleSearchSubmit}
-          >
-            Search
-          </button>
-        </div>
+      
 
         <div className="ml-2 mt-2 block">
           <span className="relative inline-block">

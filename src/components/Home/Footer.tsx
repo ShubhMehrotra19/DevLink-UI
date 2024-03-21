@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <section className="relative overflow-hidden bg-transparent py-8 max-w-7xl mx-auto mt-32">
+    <section className="relative overflow-hidden bg-transparent py-8 max-w-7xl mx-auto mt-32 mb-3">
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-between">
         <div className='flex justify-center items-center md:scale-100 scale-90'>
@@ -24,7 +24,7 @@ export default function Footer() {
               </li>
               <li className="p-5">
                 <a className="font-medium text-gray-300 hover:text-gray-100" href="#">
-                  Return Policy
+                  Documentation
                 </a>
               </li>
               <li className="p-5">
