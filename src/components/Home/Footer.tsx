@@ -13,22 +13,22 @@ export default function Footer() {
           <div className="w-auto p-8">
             <ul className="-m-5 flex flex-wrap items-center">
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="#">
+                <a className="font-medium text-gray-300 hover:text-gray-100" target='_blank' href="/policy">
                   Privacy Policy
                 </a>
               </li>
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="/terms">
+                <a className="font-medium text-gray-300 hover:text-gray-100" target='_blank' href="/terms">
                   Terms of Service
                 </a>
               </li>
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="https://github.com/DevLink-Org">
+                <a className="font-medium text-gray-300 hover:text-gray-100" target='_blank' href="https://github.com/DevLink-Org">
                   Documentation
                 </a>
               </li>
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="/contact">
+                <a className="font-medium text-gray-300 hover:text-gray-100" target='_blank' href="/contact">
                   Contact Us
                 </a>
               </li>
