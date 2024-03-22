@@ -76,7 +76,7 @@ function Page() {
 
   return (
     <>
-      <div className="relative z-0">
+      <div className="relative z-0 overflow-x-hidden">
         <GridBackgroundDemo1 />
       <Navbar userImage={session?.user?.image!} />
        <div className="flex flex-col justify-center items-center">
