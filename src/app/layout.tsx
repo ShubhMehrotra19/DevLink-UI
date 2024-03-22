@@ -26,6 +26,7 @@ export default async function RootLayout({
         scrollbarColor: "transparent transparent",
         scrollBehavior: "smooth",
         overflowX: "hidden",
+        
       }}
     >
       <body className={poppins.className}>

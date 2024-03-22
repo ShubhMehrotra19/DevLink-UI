@@ -14,16 +14,13 @@ import {
     description: string; // Correct location
   }) {
     return (
-        <div className="flex md:py-20 py-5 items-center justify-center antialiased">
+        <div className="flex md:py-20 py-5 md:mb-0 mb-8 items-center justify-center antialiased">
           <GlowingStarsBackgroundCard>
             <GlowingStarsTitle>{cons}</GlowingStarsTitle>
             <div className="flex justify-between items-end">
               <GlowingStarsDescription>
                 {description}
               </GlowingStarsDescription>
-              <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center hover:scale-105 transition duration-100 ease-in-out active:scale-90">
-                <Icon />
-              </div>
             </div>
           </GlowingStarsBackgroundCard>
         </div>
