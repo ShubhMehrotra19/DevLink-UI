@@ -14,7 +14,7 @@ import {
     description: string; // Correct location
   }) {
     return (
-        <div className="flex py-20 items-center justify-center antialiased">
+        <div className="flex md:py-20 py-5 items-center justify-center antialiased">
           <GlowingStarsBackgroundCard>
             <GlowingStarsTitle>{cons}</GlowingStarsTitle>
             <div className="flex justify-between items-end">

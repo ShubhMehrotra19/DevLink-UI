@@ -18,17 +18,17 @@ export default function Footer() {
                 </a>
               </li>
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="#">
+                <a className="font-medium text-gray-300 hover:text-gray-100" href="/terms">
                   Terms of Service
                 </a>
               </li>
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="#">
+                <a className="font-medium text-gray-300 hover:text-gray-100" href="https://github.com/DevLink-Org">
                   Documentation
                 </a>
               </li>
               <li className="p-5">
-                <a className="font-medium text-gray-300 hover:text-gray-100" href="#">
+                <a className="font-medium text-gray-300 hover:text-gray-100" href="/contact">
                   Contact Us
                 </a>
               </li>

@@ -13,20 +13,22 @@ export default function About() {
         Welcome to DevLink, where we cultivate a culture of excellence through a comprehensive solution. In today&apos;s fast-paced era, it is imperative for developers to uphold consistency and responsibility in their social media presence. Regrettably, only a few are mindful of this commitment from their initial years of study. As a freshman, it is essential to focus on striking a harmonious balance between academic pursuits and the acquisition of new skills.
         In the contemporary landscape, seasoned developers emphasize the importance of showcasing one&apos;s learning journey on social media platforms such as Twitter, LinkedIn, Instagram, or YouTube, albeit less frequently. Surprisingly, one platform often overlooked by students is GitHub.
       </p>
-      <div className="flex justify-between mx-5 items-center">
-        <p className="text-left text-lg font-normal text-neutral-400 leading-relaxed p-5">
-          While GitHub may not be a conventional social media platform, <br />
-          it encapsulates all the essentials for a developer to thrive in the tech industry.<br />
-          Proficiency in understanding <span className="p-1 bg-slate-600/[0.5] rounded-md">{cICDPipelines}</span> and Git commands <br />
-          is crucial for effectively contributing to and collaborating <br />
+      <div className="flex md:flex-row flex-col justify-between mx-5 items-center">
+        <p className="md:text-left text-center sm:px-10 text-xs md:w-fit w-96 md:text-lg font-normal text-neutral-400 leading-relaxed p-5 md:">
+          While GitHub may not be a conventional social media platform, <br className="md:block hidden" />
+          it encapsulates all the essentials for a developer to thrive in the tech industry.<br className="md:block hidden" />
+          Proficiency in understanding <span className="p-1 bg-slate-600/[0.5] rounded-md">{cICDPipelines}</span> and Git commands <br className="md:block hidden" />
+          is crucial for effectively contributing to and collaborating <br className="md:block hidden" />
           on <span className="p-1 bg-slate-600/[0.5] rounded-md">{productionBases}</span>.
           Here at DevLink, we harness the power of GitHub <br />
-          to create an interactive platform that not only facilitates user interaction <br />
-          but also fosters meaningful connections. <br />
-          Join us as we empower developers to excel in the tech industry <br />
+          to create an interactive platform that not only facilitates user interaction <br className="md:block hidden" />
+          but also fosters meaningful connections. <br className="md:block hidden" />
+          Join us as we empower developers to excel in the tech industry <br className="md:block hidden" />
           through a holistic approach to <span className="p-1 bg-slate-600/[0.5] rounded-md">{skillDevelopment}</span> and <span className="p-1 bg-slate-600/[0.5] rounded-md">{networking}</span>.
         </p>
+        <div className="md:scale-100 scale-50">
         <Cardfront />
+        </div>
       </div>
     </div>
   );

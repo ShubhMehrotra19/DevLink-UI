@@ -23,12 +23,12 @@ export function FollowingPointerDemo({
           <div className="w-full p-1 aspect-w-16 aspect-h-10 bg-gray-100  rounded-2xl overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative group-hover:scale-95 group-hover:rounded-2xl transform transition duration-200">
             <div> {/* removed h-full w-full from here. */}
               <Image
-                height={150}
-                width={450}
+              width={450}
+              height={350}
                 src={image}
                 alt="thumbnail"
                 objectFit="cover"
-                className="object-cover  rounded-2xl"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>
