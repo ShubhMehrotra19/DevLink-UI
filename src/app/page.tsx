@@ -24,14 +24,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="sticky z-10 w-full top-0">
         <Navbar />
       </div>
         <section>
           <GridBackgroundDemo />
           <div className=" md:block hidden"><HeroScrollDemo /></div>
-          <div className=" m-5 text-center w-full text-6xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">With DevLink you get</div>
+          <div className=" m-5 mx-auto text-center w-full md:text-6xl text-4xl md:px-0 px-5 font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">With DevLink you get</div>
           <div className="flex md:flex-row flex-col justify-center md:gap-24 gap-3 mx-auto items-center w-screen md:mb-24">
         {cardValue.map((card, index) => (
             <GlowingStarsBackgroundCardPreview key={index} cons={card.cons} description={card.description} />
