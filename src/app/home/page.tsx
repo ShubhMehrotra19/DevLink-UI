@@ -22,8 +22,7 @@ interface Data {
 }
 
 function Page() {
-  // const [values, setValues] = useState<[Data]>();
-
+  const [values, setValues] = useState<[Data]>();
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearchValue = (value: string) => {
@@ -32,99 +31,36 @@ function Page() {
 
   const [loading, setLoading] = useState(false);
 
-  // async function fetchData() {
-  //   setLoading(true);
-  //   try {
-  //     console.log(searchValue);
-  //     const response = searchValue
-  //       ? await fetch(/api/form/search/${searchValue})
-  //       : await fetch(/api/form);
+  async function fetchData() {
+    setLoading(true);
+    try {
+      console.log(searchValue);
+      const response = searchValue
+        ? await fetch(`/api/form/search/${String(searchValue)}`)
+        : await fetch(`/api/form`);
 
-  //     const res = await response.json();
+      const res = await response.json();
 
-  //     setValues(res.data);
-  //   } catch (e) {
-  //     console.log(e);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // }
+      setValues(res.data);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  }
 
-  // useEffect(() => {
-  //   if (searchValue === "") {
-  //     fetchData();
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (searchValue === "") {
+      fetchData();
+    }
+  }, []);
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, [searchValue]);
+  useEffect(() => {
+    fetchData();
+  }, [searchValue]);
 
   const { data: session } = useSession();
 
-  const values = [
-    {
-      firstName: "John",
-      lastName: "Doe",
-      regno: "22BCE1234",
-      description: "Software Developer",
-      image: '/card/devlink_pic.jpg',
-      avatar: '/card/devlink_pic.jpg',
-      linkedin: "https://github.com/",
-      github: "https://github.com/",
-      twitter: "https://github.com/",
-      portfolio: "https://github.com/",
-    },
-    {
-      firstName: "John",
-      lastName: "Doe",
-      regno: "22BCE1234",
-      description: "Software Developer",
-      image: '/card/devlink_pic.jpg',
-      avatar: '/card/devlink_pic.jpg',
-      linkedin: "https://github.com/",
-      github: "https://github.com/",
-      twitter: "https://github.com/",
-      portfolio: "https://github.com/",
-    },
-    {
-      firstName: "John",
-      lastName: "Doe",
-      regno: "22BCE1234",
-      description: "Software Developer",
-      image: '/card/devlink_pic.jpg',
-      avatar: '/card/devlink_pic.jpg',
-      linkedin: "https://github.com/",
-      github: "https://github.com/",
-      twitter: "https://github.com/",
-      portfolio: "https://github.com/",
-    },
-    {
-      firstName: "John",
-      lastName: "Doe",
-      regno: "22BCE1234",
-      description: "Software Developer",
-      image: '/card/devlink_pic.jpg',
-      avatar: '/card/devlink_pic.jpg',
-      linkedin: "https://github.com/",
-      github: "https://github.com/",
-      twitter: "https://github.com/",
-      portfolio: "https://github.com/",
-    },
-    {
-      firstName: "John",
-      lastName: "Doe",
-      regno: "22BCE1234",
-      description: "Software Developer",
-      image: '/card/devlink_pic.jpg',
-      avatar: '/card/devlink_pic.jpg',
-      linkedin: "https://github.com/",
-      github: "https://github.com/",
-      twitter: "https://github.com/",
-      portfolio: "https://github.com/",
-    },
-
-  ];
 
   const { scrollYProgress } = useScroll();
 
@@ -192,8 +128,7 @@ function Page() {
                         registerNumber={value.regno}
                         title={value.firstName + " " + value.lastName}
                         description={value.description}
-                        // image={`data:image/png;base64,${value.image}`}
-                        image={'/card/devlink_pic1.png'}
+                        image={`data:image/png;base64,${value.image}`}
                         authorAvatar={value.avatar}
                         linkedinLink={value.linkedin}
                         githubLink={value.github}
