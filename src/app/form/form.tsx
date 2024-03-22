@@ -52,8 +52,8 @@ export function Form() {
         return;
       }
 
-      const maxImageWidth = 350;
-      const maxImageHeight = 350;
+      const maxImageWidth = 450;
+      const maxImageHeight = 250;
 
       const reader = new FileReader();
       reader.onload = () => {
