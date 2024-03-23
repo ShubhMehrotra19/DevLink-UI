@@ -25,13 +25,13 @@ function Cardfront({
   portfolioLink,
 }: any) {
   return (
-    <div className="p-6 flex flex-col bg-white w-[600px] h-[350px] rounded flex-grow border-black/[0.4] border-2 mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out">
+    <div className="p-6 flex flex-col bg-white shadow-white/50 shadow-md w-[600px] h-[350px] rounded flex-grow border-black/[0.4] border-2 mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out">
       <div className="flex justify-between items-start">
         <div className="flex flex-col justify-start items-start">
           <Image
             height={160}
             width={160}
-            className="mb-3 rounded-full object-cover h-40 w-40"
+            className="mb-3 rounded-full object-cover h-40 w-40 border-2 border-black/30"
             src={imageLink}
             alt=""
           />

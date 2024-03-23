@@ -22,7 +22,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="flex md:flex-row flex-col gap-3 justify-center items-center">
+        <div className="flex flex-row gap-3 justify-center items-center">
           <EditCardLink />
           <Link href="/home">
             <button
@@ -34,7 +34,7 @@ export default function Navbar() {
           </Link>
           <button
             type="button"
-            className="flex justify-center items-center gap-1 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 active:scale-95 transition ease-in-out cursor-pointer"
+            className="flex justify-center items-center gap-1 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-800 active:scale-95 transition ease-in-out cursor-pointer"
             onClick={() => {
               signOut({ callbackUrl: "/" });
             }}

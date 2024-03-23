@@ -113,9 +113,9 @@ function Page() {
         {loading ? (
           <Loading />
         ) : (
-          <section className="w-full">
-            <div className="mt-20  flex justify-center items-start h-[86%] pt-2 mb-4">
-              <div className="grid md:grid-cols-4 md:gap-12 gap-4">
+          <section className="w-screen">
+            <div className="mt-5 flex justify-center items-center h-[86%] pt-2 mb-4">  {/* changed items-start to items-center and w-full to w-screen */}
+              <div className="grid md:grid-cols-4 md:gap-12 gap-4 place-content-center"> {/* added place-content-center */}
                 {!values && searchValue ? (
                   <>{handleEmpty()}</>
                 ) : (

@@ -25,8 +25,8 @@ function Cardfront_res({
   portfolioLink,
 }: any) {
   return (
-    <div className=" select-none p-6 flex flex-col bg-[#F9F9F9] h-[450px] w-[300px] rounded flex-grow border-black/[0.4] border-2 shadow-current shadow-md mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out">
-      <div className="flex flex-col justify-center items-center">
+    <div className=" select-none p-6 flex flex-col bg-[#F9F9F9] shadow-white/50 shadow-md h-[450px] w-[300px] rounded flex-grow border-black/[0.4] border-2 mb-8 active:scale-95 hover:scale-[102%] transition-all duration-300 cursor-pointer ease-in-out">
+      <div className="flex flex-col justify-center items-center border-2 border-black/30">
         <Image
           height={100}
           width={100}
