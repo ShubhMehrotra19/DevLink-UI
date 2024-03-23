@@ -21,16 +21,16 @@ function CardFlip(props: Props) {
   const [lastName, setLastName] = useState("User");
   const [regNumber, setRegNumber] = useState("22BCE1234");
   const [linkedin, setLinkedin] = useState("https://www.linkedin.com/in/");
-  const [twitter, setTwitter] = useState("https://www.linkedin.com/in");
-  const [portfolio, setPortfolio] = useState("https://www.linkedin.com/in/");
+  const [twitter, setTwitter] = useState("https://www.twitter.com/in");
+  const [portfolio, setPortfolio] = useState("https://www.google.com/in/");
   const [image, setImage] = useState(
-    "https://images.pexels.com/photos/1182825/pexels-photo-1182825.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "/default_img.png"
   );
-  const [github, setGithub] = useState("https://www.linkedin.com/in/");
-  const [description, setDescription] = useState("Web Developer");
+  const [github, setGithub] = useState("https://www.github.com/in/");
+  const [description, setDescription] = useState("Description");
   const [username, setUsername] = useState("new-user");
   const [avatar, setAvatar] = useState(
-    "https://images.pexels.com/photos/19597529/pexels-photo-19597529/free-photo-of-man-playing-with-dogs-on-a-beach.jpeg"
+    "/default_img.png"
   );
 
   const [loading, setLoading] = useState(false);
@@ -117,7 +117,7 @@ function CardFlip(props: Props) {
             {isMobile ? (
               <Cardfront_res
                 userName={firstName + " " + lastName}
-                userDomain="Web Developer"
+                userDomain="DevLink User"
                 imageLink={image}
                 regNumber={regNumber}
                 githubLink={github}
@@ -128,7 +128,7 @@ function CardFlip(props: Props) {
             ) : (
               <Cardfront
                 userName={firstName + " " + lastName}
-                userDomain="Web Developer"
+                userDomain="DevLink User"
                 imageLink={image}
                 regNumber={regNumber}
                 githubLink={github}
