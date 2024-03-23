@@ -79,8 +79,8 @@ function Page() {
   return (
     <>
       <div className="relative z-0 overflow-x-hidden">
-      <Navbar userImage={session?.user?.image!} />
-              <div className="relative h-screen w-full">
+        <Navbar userImage={session?.user?.image!} />
+        <div className="relative h-screen w-full">
           <GridBackgroundDemo1 />
           <div className="absolute inset-0 flex justify-center items-center md:mt-0 -mt-40">
             <div className="flex flex-col justify-center items-center z-10">
@@ -105,48 +105,46 @@ function Page() {
                     handleSearchSubmit();
                     toggleClickedBtn();
                   }}
-                  >
-                    Search
-                  </button>
-                </div>
+                >
+                  Search
+                </button>
               </div>
             </div>
           </div>
-          {loading ? (
-            <Loading />
-          ) : (
-            <section className="w-full">
-              <div className="mt-20  flex justify-center items-start h-[86%] pt-2 mb-4">
-                <div className="grid md:grid-cols-4 md:gap-12 gap-4">
-                                  {!values && searchValue ? (
-                    <>
-                      {handleEmpty()}
-                    </>
-                  ) : (
-                    values?.map(
-                      (value, index) =>
-                        value.linkedin && (
-                          <FollowingPointerDemo
-                            key={value.github}
-                            author={value.firstName + " " + value.lastName}
-                            registerNumber={value.regno}
-                            title={value.firstName + " " + value.lastName}
-                            description={value.description}
-                            image={`data:image/png;base64,${value.image}`}
-                            authorAvatar={value.avatar}
-                            linkedinLink={value.linkedin}
-                            githubLink={value.github}
-                            twitterLink={value.twitter}
-                            portfolioLink={value.portfolio}
-                          />
-                        )
-                    )
-                  )}
-                </div>
-              </div>
-            </section>
-          )}
         </div>
+        {loading ? (
+          <Loading />
+        ) : (
+          <section className="w-full">
+            <div className="mt-20  flex justify-center items-start h-[86%] pt-2 mb-4">
+              <div className="grid md:grid-cols-4 md:gap-12 gap-4">
+                {!values && searchValue ? (
+                  <>{handleEmpty()}</>
+                ) : (
+                  values?.map(
+                    (value, index) =>
+                      value.linkedin && (
+                        <FollowingPointerDemo
+                          key={value.github}
+                          author={value.firstName + " " + value.lastName}
+                          registerNumber={value.regno}
+                          title={value.firstName + " " + value.lastName}
+                          description={value.description}
+                          image={`data:image/png;base64,${value.image}`}
+                          authorAvatar={value.avatar}
+                          linkedinLink={value.linkedin}
+                          githubLink={value.github}
+                          twitterLink={value.twitter}
+                          portfolioLink={value.portfolio}
+                        />
+                      )
+                  )
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+      </div>
     </>
   );
 }
