@@ -62,7 +62,9 @@ function Page() {
 
   const { data: session } = useSession();
 
-  const { scrollYProgress } = useScroll();
+  const handleEmpty = () => {
+    window.alert("No results found!");
+  };
 
   const [clickedBtn, setClickedBtn] = useState(false);
 
@@ -77,21 +79,11 @@ function Page() {
   return (
     <>
       <div className="relative z-0 overflow-x-hidden">
-        <GridBackgroundDemo1 />
-        <Navbar userImage={session?.user?.image!} />
-        <div className="flex flex-col justify-center items-center">
-          <motion.div
-            className="absolute md:top-[5%] top-[3%] md:left-[20%] left-[8%]"
-            style={{
-              opacity: parseFloat(
-                (1 - parseFloat(scrollYProgress.toString())).toFixed(2)
-              ),
-              y: parseFloat(
-                (-100 * parseFloat(scrollYProgress.toString())).toFixed(2)
-              ),
-            }}
-          >
-            <div className="flex flex-col justify-center items-center mt-36 z-0">
+      <Navbar userImage={session?.user?.image!} />
+              <div className="relative h-screen w-full">
+          <GridBackgroundDemo1 />
+          <div className="absolute inset-0 flex justify-center items-center md:mt-0 -mt-40">
+            <div className="flex flex-col justify-center items-center z-10">
               <h1 className="text-center w-full md:text-[150px] text-[90px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
                 DevLink
               </h1>
@@ -113,20 +105,23 @@ function Page() {
                     handleSearchSubmit();
                     toggleClickedBtn();
                   }}
-                >
-                  Search
-                </button>
+                  >
+                    Search
+                  </button>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
           {loading ? (
             <Loading />
           ) : (
             <section className="w-full">
               <div className="mt-20  flex justify-center items-start h-[86%] pt-2 mb-4">
                 <div className="grid md:grid-cols-4 md:gap-12 gap-4">
-                  {!values && searchValue ? (
-                    <>{window.alert("No results found!")}</>
+                                  {!values && searchValue ? (
+                    <>
+                      {handleEmpty()}
+                    </>
                   ) : (
                     values?.map(
                       (value, index) =>
@@ -152,7 +147,6 @@ function Page() {
             </section>
           )}
         </div>
-      </div>
     </>
   );
 }
