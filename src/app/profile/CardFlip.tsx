@@ -3,16 +3,11 @@ import React, { use } from "react";
 import ReactCardFlip from "react-card-flip";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import CardFront_demo from "@/components/CardComponent/cardFront_demo";
-import CardBack_demo from "@/components/CardComponent/cardBack_demo";
 import { useMediaQuery } from "@react-hook/media-query";
-import Cardfront_mobile from "@/components/CardComponent/cardFront_mobile";
-import Cardback_mobile from "@/components/CardComponent/cardBack_mobile";
 import Cardfront_res from "@/components/CardComponent/cardFront_res";
 import Cardfront from "@/components/CardComponent/cardFront";
 import Cardback_res from "@/components/CardComponent/cardBack_res";
 import CardBack from "@/components/CardComponent/cardBack";
-import { set } from "zod";
 import Loading from "../loading";
 
 interface Props {}
@@ -57,17 +52,49 @@ function CardFlip(props: Props) {
 
       const res = await response.json();
 
-      setFirstName(res.data.firstName);
-      setLastName(res.data.lastName);
-      setRegNumber(res.data.regNumber);
-      setLinkedin(res.data.linkedin);
-      setTwitter(res.data.twitter);
-      setPortfolio(res.data.portfolio);
-      setImage(`data:image/png;base64,${res.data.image}`);
-      setGithub(res.data.github);
-      setUsername(res.data.username);
-      setDescription(res.data.description);
-      setAvatar(res.data.avatar);
+      if (res.data.firstName) {
+        setFirstName(res.data.firstName);
+      }
+
+      if (res.data.lastName) {
+        setLastName(res.data.lastName);
+      }
+
+      if (res.data.regNumber) {
+        setRegNumber(res.data.regNumber);
+      }
+
+      if (res.data.linkedin) {
+        setLinkedin(res.data.linkedin);
+      }
+
+      if (res.data.twitter) {
+        setTwitter(res.data.twitter);
+      }
+
+      if (res.data.portfolio) {
+        setPortfolio(res.data.portfolio);
+      }
+
+      if (res.data.image) {
+        setImage(`data:image/png;base64,${res.data.image}`);
+      }
+
+      if (res.data.github) {
+        setGithub(res.data.github);
+      }
+
+      if (res.data.username) {
+        setUsername(res.data.username);
+      }
+
+      if (res.data.description) {
+        setDescription(res.data.description);
+      }
+
+      if (res.data.avatar) {
+        setAvatar(res.data.avatar);
+      }
     } catch (error) {
       console.log(error);
     } finally {

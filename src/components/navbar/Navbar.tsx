@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -24,14 +23,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          {session ? (
-            <button
-              className="flex justify-center items-center gap-1 rounded-md bg-slate-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 active:scale-95 transition ease-in-out cursor-pointer"
-              onClick={() => signOut()}
-            >
-              LogOut
-            </button>
-          ) : (
+          {!session && (
             <Link href="/form">
               <button
                 type="button"
