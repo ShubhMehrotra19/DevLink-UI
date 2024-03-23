@@ -34,7 +34,6 @@ function Page() {
   async function fetchData() {
     setLoading(true);
     try {
-      console.log(searchValue);
       const response = searchValue
         ? await fetch(`/api/form/search/${String(searchValue)}`)
         : await fetch(`/api/form`);
@@ -42,7 +41,6 @@ function Page() {
       const res = await response.json();
 
       setValues(res.data);
-      console.log(res.data);
     } catch (e) {
       console.log(e);
     } finally {

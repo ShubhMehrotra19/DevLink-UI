@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import EditCardLink from "@/components/ui/EditCard";
+import { signOut } from "next-auth/react";
 
 export default function Navbar() {
   return (
@@ -31,6 +32,15 @@ export default function Navbar() {
               back
             </button>
           </Link>
+          <button
+            type="button"
+            className="flex justify-center items-center gap-1 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 active:scale-95 transition ease-in-out cursor-pointer"
+            onClick={() => {
+              signOut({ callbackUrl: "/" });
+            }}
+          >
+            LogOut
+          </button>
         </div>
       </div>
     </div>
