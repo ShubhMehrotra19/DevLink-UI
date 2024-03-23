@@ -7,7 +7,7 @@ import Link from "next/link";
 export function AnimatedPinDemo() {
   return (
     <div className="h-[40rem] w-full flex items-center justify-center ">
-      <Link href='https://devlink-kappa.vercel.app/'><PinContainer
+      <Link href='/'><PinContainer
         title="DevLink"
         href="/"
       >
