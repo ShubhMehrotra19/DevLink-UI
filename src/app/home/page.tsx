@@ -93,7 +93,7 @@ function Page() {
                   className="flex h-10 md:w-[800px] w-[150px]  rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 object-cover ring-2 ring-black/30"
                   type="text"
                   id="search"
-                  placeholder="Search..."
+                  placeholder="Search Registration Number..."
                   value={searchValue}
                   onChange={(e) => handleSearchValue(e.target.value)}
                 />

@@ -21,10 +21,10 @@ export function FollowingPointerDemo({
       >
         <div className="relative h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100">
           <div className="w-full p-1 aspect-w-16 aspect-h-10 bg-gray-100  rounded-2xl overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative group-hover:scale-95 group-hover:rounded-2xl transform transition duration-200">
-            <div> {/* removed h-full w-full from here. */}
+            <div>
               <Image
-              width={450}
-              height={350}
+                width={450}
+                height={350}
                 src={image}
                 alt="thumbnail"
                 objectFit="cover"
@@ -34,7 +34,7 @@ export function FollowingPointerDemo({
           </div>
           <div className="p-4">
             <h2 className="font-bold my-4 text-lg text-zinc-700">{title}</h2>
-            <h2 className="font-normal my-4 text-sm text-zinc-500">
+            <h2 className="font-normal my-4 text-sm text-zinc-500 overflow-hidden whitespace-nowrap text-ellipsis">
               {description}
             </h2>
             <div className="flex flex-row justify-between items-center mt-10">
@@ -54,6 +54,7 @@ export function FollowingPointerDemo({
     </div>
   );
 }
+
 
 const TitleComponent = ({
   title,

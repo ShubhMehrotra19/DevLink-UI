@@ -124,6 +124,11 @@ export function Form() {
   };
   
   const isValidUrl = (url: string): boolean => {
+    // If the URL is empty, consider it valid
+    if (url.trim() === "") {
+      return true;
+    }
+    
     // Regular expression to validate URL starting with https://
     const urlPattern = /^https:\/\//i;
     return urlPattern.test(url);
