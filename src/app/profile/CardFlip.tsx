@@ -23,15 +23,16 @@ function CardFlip(props: Props) {
   const [linkedin, setLinkedin] = useState("https://www.linkedin.com/in/");
   const [twitter, setTwitter] = useState("https://www.twitter.com/in");
   const [portfolio, setPortfolio] = useState("https://www.google.com/in/");
-  const [image, setImage] = useState(
-    "/default_img.png"
-  );
+  const [image, setImage] = useState("/default_img.png");
   const [github, setGithub] = useState("https://www.github.com/in/");
   const [description, setDescription] = useState("Description");
   const [username, setUsername] = useState("new-user");
-  const [avatar, setAvatar] = useState(
-    "/default_img.png"
-  );
+  const [avatar, setAvatar] = useState("/default_img.png");
+  const [hashtags, setHashtags] = useState([
+    "Web Developer",
+    "React",
+    "Next.js",
+  ]);
 
   const [loading, setLoading] = useState(false);
 
@@ -60,8 +61,8 @@ function CardFlip(props: Props) {
         setLastName(res.data.lastName);
       }
 
-      if (res.data.regNumber) {
-        setRegNumber(res.data.regNumber);
+      if (res.data.regno) {
+        setRegNumber(res.data.regno);
       }
 
       if (res.data.linkedin) {
@@ -94,6 +95,9 @@ function CardFlip(props: Props) {
 
       if (res.data.avatar) {
         setAvatar(res.data.avatar);
+      }
+      if (hashtags) {
+        setHashtags(res.data.hashtags);
       }
     } catch (error) {
       console.log(error);
@@ -145,9 +149,9 @@ function CardFlip(props: Props) {
               <Cardback_res
                 githubLink={github}
                 githubImageLink={avatar}
-                hashtag1="Web Developer"
-                hashtag2="React"
-                hashtag3="Next.js"
+                hashtag1={hashtags[0]}
+                hashtag2={hashtags[1]}
+                hashtag3={hashtags[2]}
                 githubBio={description}
                 linkedinLink={linkedin}
                 twitterLink={twitter}
@@ -159,9 +163,9 @@ function CardFlip(props: Props) {
                 githubLink={github}
                 githubBio={description}
                 githubImageLink={avatar}
-                hashtag1="Web Developer"
-                hashtag2="React"
-                hashtag3="Next.js"
+                hashtag1={hashtags[0]}
+                hashtag2={hashtags[1]}
+                hashtag3={hashtags[2]}
                 linkedinLink={linkedin}
                 twitterLink={twitter}
                 portfolioLink={portfolio}
