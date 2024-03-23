@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar/Navbar";
 import { HeroScrollDemo } from "@/components/Home/HeroScrollDemo";
 import Footer from "@/components/Home/Footer";
 import { InfiniteMovingCardsDemo } from "@/components/Home/InfiniteMovingCardsDemo";
+import { Team } from "@/components/Home/Team";
 
 export default function Home() {
   const cardValue = [
@@ -39,6 +40,7 @@ export default function Home() {
         </div>
         <About />
         <InfiniteMovingCardsDemo />
+        <Team />
         <Footer />
         </section>
       </div>

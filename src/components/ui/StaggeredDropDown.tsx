@@ -1,10 +1,6 @@
 "use client";
 import {
-  FiEdit,
   FiChevronDown,
-  FiTrash,
-  FiShare,
-  FiPlusSquare,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -19,6 +15,10 @@ const StaggeredDropDown = ({
 }: any) => {
   const [open, setOpen] = useState(false);
 
+  console.log(linkedinLink);
+  console.log(githubLink);
+  
+  
   return (
     <div className="p-3 flex items-center justify-center bg-transparent">
       <motion.div
@@ -41,16 +41,16 @@ const StaggeredDropDown = ({
           style={{ originY: "top", translateX: "-50%" }}
           className="flex items-center justify-center gap-3 py-1 px-2 rounded-lg bg-white/80 text-black shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden z-20"
         >
-          <Link href={githubLink}>
+          <Link target="_blank" href={githubLink}>
             <Option Icon="/icons/github-12.png" />
           </Link>
-          <Link href={linkedinLink}>
+          <Link target="_blank" href={linkedinLink}>
             <Option Icon="/icons/linkedin-12.png" />
           </Link>
-          <Link href={twitterLink}>
+          <Link target="_blank" href={twitterLink}>
             <Option Icon="/icons/twitter-12.png" />
           </Link>
-          <Link href={portfolioLink}>
+          <Link target="_blank" href={portfolioLink}>
             <Option Icon="/icons/link-12.png" />
           </Link>
         </motion.ul>

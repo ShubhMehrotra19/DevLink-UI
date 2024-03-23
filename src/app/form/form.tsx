@@ -95,8 +95,17 @@ export function Form() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (
+      !isValidUrl(formData.twitter) ||
+      !isValidUrl(formData.linkedin) ||
+      !isValidUrl(formData.portfolio)
+    ) {
+      alert("Please enter valid URLs starting with https://");
+      return;
+    }
+  
     const email = session?.user?.email;
-
+  
     try {
       const response = await fetch(`/api/form/${session?.user?.email}`, {
         method: "PUT",
@@ -105,7 +114,7 @@ export function Form() {
         },
         body: JSON.stringify(formData),
       });
-
+  
       setResponse(await response.text());
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -113,6 +122,13 @@ export function Form() {
       router.push("/home");
     }
   };
+  
+  const isValidUrl = (url: string): boolean => {
+    // Regular expression to validate URL starting with https://
+    const urlPattern = /^https:\/\//i;
+    return urlPattern.test(url);
+  };
+  
 
   return session ? (
     <div className="absolute z-20 max-w-md w-full flex flex-col justify-center items-center mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black bg-[rgba(0, 0, 0, 0.3)] backdrop-blur-sm">
