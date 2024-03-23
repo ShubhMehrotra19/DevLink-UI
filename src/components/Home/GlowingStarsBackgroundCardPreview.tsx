@@ -1,31 +1,29 @@
 "use client";
 import React from "react";
 import {
-    GlowingStarsBackgroundCard,
-    GlowingStarsDescription,
-    GlowingStarsTitle,
-  } from "../ui/glowing-stars";
+  GlowingStarsBackgroundCard,
+  GlowingStarsDescription,
+  GlowingStarsTitle,
+} from "../ui/glowing-stars";
 
-  export function GlowingStarsBackgroundCardPreview({
-    cons,
-    description,
-  }: {
-    cons: string;
-    description: string; // Correct location
-  }) {
-    return (
-        <div className="flex md:py-20 py-5 md:mb-0 mb-8 items-center justify-center antialiased">
-          <GlowingStarsBackgroundCard>
-            <GlowingStarsTitle>{cons}</GlowingStarsTitle>
-            <div className="flex justify-between items-end">
-              <GlowingStarsDescription>
-                {description}
-              </GlowingStarsDescription>
-            </div>
-          </GlowingStarsBackgroundCard>
+export function GlowingStarsBackgroundCardPreview({
+  cons,
+  description,
+}: {
+  cons: string;
+  description: string; // Correct location
+}) {
+  return (
+    <div className="flex md:py-20 py-5 md:mb-0 mb-8 items-center justify-center antialiased">
+      <GlowingStarsBackgroundCard>
+        <GlowingStarsTitle>{cons}</GlowingStarsTitle>
+        <div className="flex justify-between items-end">
+          <GlowingStarsDescription>{description}</GlowingStarsDescription>
         </div>
-      );
-    }
+      </GlowingStarsBackgroundCard>
+    </div>
+  );
+}
 
 const Icon = () => {
   return (
