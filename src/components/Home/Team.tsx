@@ -15,7 +15,7 @@ export function Team() {
         <Link href='https://github.com/ShubhMehrotra19/'>
         <div className="flex flex-col items-center text-start cursor-pointer">
           <div
-            className="relative flex h-[342px] w-full flex-col justify-end rounded-[10px] bg-red-300"
+            className="relative flex h-[342px] w-full flex-col justify-end rounded-[10px] bg-transparent"
             style={{
               backgroundPosition: 'center',
               backgroundSize: 'cover',
@@ -39,7 +39,7 @@ export function Team() {
        <Link href='https://github.com/darkCoder001'>
        <div className="flex flex-col items-center text-start cursor-pointer">
           <div
-            className="relative flex h-[342px] w-full flex-col justify-end rounded-[10px] bg-red-300"
+            className="relative flex h-[342px] w-full flex-col justify-end rounded-[10px] bg-transparent"
             style={{
               backgroundPosition: 'center',
               backgroundSize: 'cover',
