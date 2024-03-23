@@ -238,7 +238,7 @@ export function Form() {
           <Label htmlFor="image">Image</Label>
           <Input
             id="image"
-            placeholder="keep image (300 x 300)px"
+            placeholder="keep image (350 x 350)px"
             type="file"
             accept="image/*"
             onChange={handleFileChange}
