@@ -20,7 +20,7 @@ const testimonials = [
     quote:
       "With DevLink, connecting and Netwroking with your colleagues becomes better and easier. Just a scan or a link away. It's a must have for every student.",
     name: "Shubh Mehrotra",
-    title: "DevLink CEO",
+    title: "DevLink Frontend Developer",
   },
   {
     quote:
@@ -29,7 +29,8 @@ const testimonials = [
     title: "DevLink Backend Developer",
   },
   {
-    quote: "We have made an effort to make DevLink as user-friendly as possible. Finding likeminded peers can be as difficult as finding a needle in a haystack. DevLink is here to help you with that. We are here to help you grow!",
+    quote:
+      "We have made an effort to make DevLink as user-friendly as possible. Finding likeminded peers can be as difficult as finding a needle in a haystack. DevLink is here to help you with that. We are here to help you grow!",
     name: "Harshvardhan Singh",
     title: "DevLink tester",
   },
