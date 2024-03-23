@@ -8,7 +8,6 @@ function CardBack({
   githubUserName,
   githubBio,
   githubImageLink,
-  regNumber,
   hashtag1,
   hashtag2,
   hashtag3,
