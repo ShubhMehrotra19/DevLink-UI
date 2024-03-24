@@ -31,7 +31,7 @@ function CardBack({
             {githubUserName}
           </div>
           <div className="text-black text-lg font-normal font-poppins mb-2">
-            {githubBio}
+            {!githubBio ? `Hey There, I am ${githubUserName}, DevLink gave me a temporary bio` : githubBio}
           </div>
           <div className="flex justify-center items-center gap-2 text-black text-sm">
             <p>#{hashtag1}</p>
